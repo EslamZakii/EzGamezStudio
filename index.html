@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EZ GAMEZ — Easy to play. Hard to master.</title>
+  <meta name="description" content="EZ GAMEZ is an indie game studio making games that are easy to pick up and hard to put down.">
+  <meta name="theme-color" content="#0d0d0d">
+  <meta property="og:title" content="EZ GAMEZ">
+  <meta property="og:description" content="Easy to play. Hard to master.">
+  <meta property="og:image" content="assets/logo.webp">
+  <link rel="icon" href="assets/logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    { "imports": { "three": "./js/vendor/three.module.min.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="EZ GAMEZ home">
+      <img src="assets/logo.webp" alt="" width="40" height="40"><span>EZ GAMEZ</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+    <nav id="menu">
+      <a href="#games">Games</a>
+      <a href="#play">Try it</a>
+      <a href="#about">Studio</a>
+      <a href="#news">News</a>
+      <a href="#contact" class="cta-sm">Join us</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Indie game studio</p>
+        <h1>Easy to play.<br><span class="red">Hard to master.</span></h1>
+        <p class="lead">We build games you can learn in ten seconds and chase mastery of for ten years.</p>
+        <div class="actions">
+          <a class="btn primary" href="#games">See our games</a>
+          <a class="btn ghost" href="#play">Try a 20s challenge</a>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#games" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <section id="games" class="section">
+      <div class="head">
+        <p class="eyebrow">Our games</p>
+        <h2>Pick up. <span class="red">Play.</span> Obsess.</h2>
+      </div>
+      <div class="grid" id="gamegrid">
+        <!-- Edit these cards: title, tag, text, status, link -->
+        <article class="card tilt">
+          <div class="art a1"></div>
+          <span class="tag">In development</span>
+          <h3>Claw Rush</h3>
+          <p>One button. Slash through waves of shadows. Perfect timing is the only upgrade.</p>
+          <a href="#contact" class="link">Get notified →</a>
+        </article>
+        <article class="card tilt">
+          <div class="art a2"></div>
+          <span class="tag">Prototype</span>
+          <h3>Zero Ping</h3>
+          <p>A 60-second arena duel. Anyone can win a round — only the best win the streak.</p>
+          <a href="#contact" class="link">Join playtests →</a>
+        </article>
+        <article class="card tilt">
+          <div class="art a3"></div>
+          <span class="tag">Coming soon</span>
+          <h3>Gamez Arcade</h3>
+          <p>A collection of bite-sized challenges with global leaderboards.</p>
+          <a href="#contact" class="link">Stay in the loop →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="play" class="section split">
+      <div>
+        <p class="eyebrow">Our philosophy</p>
+        <h2>Learn it in <span class="red">10 seconds.</span></h2>
+        <p class="lead">Click the targets before they vanish. That's the whole game. But every second the targets shrink and speed up — see how long you can last.</p>
+        <ul class="ticks">
+          <li><b>Easy</b> — one rule, zero tutorials</li>
+          <li><b>Deep</b> — skill ceilings you can feel</li>
+          <li><b>Fair</b> — no pay-to-win, ever</li>
+        </ul>
+      </div>
+      <div class="gamebox">
+        <div class="hud">
+          <span>Score <b id="score">0</b></span>
+          <span>Time <b id="time">20</b></span>
+          <span>Best <b id="best">0</b></span>
+        </div>
+        <canvas id="mini" width="560" height="380" aria-label="Mini game: click the targets"></canvas>
+        <button class="btn primary" id="start">Start</button>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="head">
+        <p class="eyebrow">The studio</p>
+        <h2>Small team. <span class="red">Sharp claws.</span></h2>
+      </div>
+      <div class="stats">
+        <div><b data-count="3">0</b><span>Games in the works</span></div>
+        <div><b data-count="100" data-suffix="%">0</b><span>Player-first design</span></div>
+        <div><b data-count="1" data-suffix="M+">0</b><span>Goal: hours played</span></div>
+        <div><b data-count="1" data-suffix="">0</b><span>Rule: have fun</span></div>
+      </div>
+      <p class="about">EZ GAMEZ is an independent studio built on one belief: the best games welcome everyone at the door and reward the ones who stay. We prototype fast, playtest constantly, and polish until every input feels right.</p>
+    </section>
+
+    <section id="news" class="section">
+      <div class="head">
+        <p class="eyebrow">News</p>
+        <h2>Latest <span class="red">drops</span></h2>
+      </div>
+      <div class="news">
+        <a class="item" href="#"><time>Oct 2026</time><h3>EZ GAMEZ website goes live</h3><p>Welcome to our new home. More coming soon.</p></a>
+        <a class="item" href="#"><time>Soon</time><h3>First playtest signups open</h3><p>Be one of the first to play Claw Rush.</p></a>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Ready to <span class="red">play?</span></h2>
+      <p class="lead">Playtests, press, partnerships — say hi.</p>
+      <!-- Replace with your own email, or a Formspree/Netlify form endpoint -->
+      <a class="btn primary big" href="mailto:hello@example.com">hello@example.com</a>
+      <div class="social">
+        <a href="#" aria-label="Discord">Discord</a>
+        <a href="#" aria-label="X / Twitter">X</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="itch.io">itch.io</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/logo.webp" alt="" width="28" height="28">
+    <span>© <span id="yr"></span> EZ GAMEZ. Easy to play, hard to master.</span>
+  </footer>
+
+  <script type="module" src="js/scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
